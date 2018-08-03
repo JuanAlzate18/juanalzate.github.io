@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juan Alzate</title>
+  	<link rel="stylesheet" href="./fonts/style.css">
+	<link href="./css/styles.css" media="all" rel="stylesheet" />
+	<link href="./css/bootstrap.min.css" media="all" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="./js/parallax.js"></script>
+</head>
+<body>
+
+<div class="full-height large-padding" id="main">
+	<figure class="infoAvatar ">
+		<figcaption class="animated bounceInDown">
+			<h1 class="greenmarine text-shadow" style="margin-top: 15%">Juan Alzate</h1>
+		</figcaption>
+		<header class="full-height aligner-vertical">
+			<div class="text-center">
+				<h1 class="animated bounceInUp pink text-shadow">Analista Desarrollador</h1>
+				<a class="btn animated bounceInRight" href="#acercade"><i class="fa fa-link"></i>Acerca de mi</a>	
+			</div>
+		</header>
+	</figure>
+</div>
+
+<span class="ir-arriba icon-chevron-up"></span>
+
+<section class="full-height large-padding">
+	<div id="acercade" class="full-height aligner-vertical ">
+		<div class="text-center">
+			<h2 class="be-big">Acerca de mi</h2>	
+			<div class="col-md-10 no-float center-block purple text-justify be-medium">
+				Me gusta la música y la programación. Tengo conocimientos en HTML5, Asp.Net, Sharepoint, Sql Server y estoy aprendiendo sobre el mundo Angular.
+			</div>
+		</div>
+		
+	</div>
+</section>
+</body>
+</html>
+<script>
+	$(document).ready(function(){
+		$('.ir-arriba').click(function(){
+			$('body, html').animate({
+				scrollTop: '0px'
+			}, 300);
+		});
+
+		$(window).scroll(function(){
+			if( $(this).scrollTop() > 0 ){
+				$('.ir-arriba').slideDown(300);
+			} else {
+				$('.ir-arriba').slideUp(300);
+			}
+		});
+	});
+</script>
